@@ -15,36 +15,43 @@ namespace DotNetWebApiClient
             string userName = "user@university-a.campusnexus.cloud";
             string password = "password";
 
-            var httpClient = new HttpClient();
-            rootUri = $"{rootUri}/api/commands/Academics/CourseType";
+            using (var httpClient = new HttpClient())
+            {
+                rootUri = $"{rootUri}/api/commands/Academics/CourseType";
 
-            //set authentication header
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
-                Convert.ToBase64String(Encoding.ASCII.GetBytes($"{userName}:{password}")));
-            var commandModelClient = new CommandModelClient(httpClient, rootUri);
+                //set authentication header
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
+                    Convert.ToBase64String(Encoding.ASCII.GetBytes($"{userName}:{password}")));
+                var commandModelClient = new CommandModelClient(httpClient, rootUri);
 
-            //create
-            var result = commandModelClient.Create();
+                //create
+                Console.WriteLine("Creating...");
+                var result = commandModelClient.Create();
 
-            //save new
-            var data = (JObject)result.SelectToken("payload.data");
-            data["code"] = "Test";
-            data["name"] = "Test";
-            result = commandModelClient.SaveNew(data);
+                //save new
+                Console.WriteLine("Saving...");
+                var data = (JObject)result.SelectToken("payload.data");
+                data["code"] = "Test";
+                data["name"] = "Test";
+                result = commandModelClient.SaveNew(data);
 
-            //update
-            data = (JObject)result.SelectToken("payload.data");
-            data["name"] = "Test2";
-            result = commandModelClient.Save(data);
+                //update
+                Console.WriteLine("Udpating...");
+                data = (JObject)result.SelectToken("payload.data");
+                data["name"] = "Test2";
+                result = commandModelClient.Save(data);
 
-            //retrieve
-            var idToken = result.SelectToken("payload.data.id");
-            result = commandModelClient.Retrieve(idToken.Value<int>());
+                //retrieve
+                Console.WriteLine("Retrieving...");
+                var idToken = result.SelectToken("payload.data.id");
+                result = commandModelClient.Retrieve(idToken.Value<int>());
 
-            //delete
-            data = (JObject)result.SelectToken("payload.data");
-            result = commandModelClient.Delete(data);
-
+                //delete
+                Console.WriteLine("Deleting...");
+                data = (JObject)result.SelectToken("payload.data");
+                result = commandModelClient.Delete(data);
+            }
+            Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
     }
