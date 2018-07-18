@@ -36,7 +36,7 @@ namespace DotNetWebApiClient
                 result = commandModelClient.SaveNew(data);
 
                 //update
-                Console.WriteLine("Udpating...");
+                Console.WriteLine("Updating...");
                 data = (JObject)result.SelectToken("payload.data");
                 data["name"] = "Test2";
                 result = commandModelClient.Save(data);
