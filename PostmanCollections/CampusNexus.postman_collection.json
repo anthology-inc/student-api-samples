@@ -1,0 +1,803 @@
+{
+	"info": {
+		"_postman_id": "de49d60a-e88d-4cd6-b207-43e8efcfe00f",
+		"name": "CampusNexus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Commands",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Commands",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"payload\": {\r\n    \"id\": 27\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Course Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Academics/CourseType/create",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Academics",
+								"CourseType",
+								"create"
+							]
+						},
+						"description": "OData support bound custom actions. Actions can have side effects. So the HTTP verb for an OData action can be GET,POST,PUT,DELETE according to the behavior of the action. In the example below, the action implies a POST."
+					},
+					"response": []
+				},
+				{
+					"name": "Save New Course Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payload\": {\n        \"code\": \"Test\",\n        \"createdDateTime\": \"2018/05/16 15:53:50\",\n        \"isActive\": true,\n        \"isSystemCode\": false,\n        \"name\": \"Test\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Academics/CourseType/saveNew",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Academics",
+								"CourseType",
+								"saveNew"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"payload\": {\r\n    \"id\": 27\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Academics/CourseType/get",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Academics",
+								"CourseType",
+								"get"
+							]
+						},
+						"description": "OData support bound custom actions. Actions can have side effects. So the HTTP verb for an OData action can be GET,POST,PUT,DELETE according to the behavior of the action. In the example below, the action implies a POST."
+					},
+					"response": []
+				},
+				{
+					"name": "Save Course Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payload\": {\n        \"id\": 27,\n        \"code\": \"GM-01\",\n        \"createdDateTime\": \"2015/05/15 14:21:22\",\n        \"isActive\": true,\n        \"isSystemCode\": false,\n        \"name\": \"Assessment\",\n        \"rowVersion\": \"AAAAAAUdgR4=\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Academics/CourseType/save",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Academics",
+								"CourseType",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payload\": {\n            \"id\": 53,\n            \"code\": \"Test\",\n            \"createdDateTime\": \"2018/05/16 15:53:50\",\n            \"isActive\": true,\n            \"isSystemCode\": false,\n            \"lastModifiedDateTime\": \"2018/05/16 15:59:37\",\n            \"lastModifiedUserId\": 170,\n            \"name\": \"Test\",\n            \"rowVersion\": \"AAAAAAUdgtY=\",\n            \"originalState\": \"H4sIAAAAAAAEAMWV30/CMBDH/xWyd9aNMdBlLEF9IYIkMog+ntsNmmwt6RXn/OuFgcaXonNG+9A+3PV7n9yPNhwrBdU8u8VqBfkO5xlpxcUaRBVXW+y8FLmgkbXRehswRskGCyC74ImSJDNtJ7JgPcfxmOuwBSoOOX8FzaVgtTBZR4WAf2iUZWmXni3V+nDRZQ+z6aKW7XJBGkSCVhQacGpDNElDdjjD2qXDA703jSwIuNDv8eDreFbkeyGrNaJa0BjRjHItUzTAHL0b8cRIujWRQtCY3uy3mBcmuPRkboTXc9yLruN33UHs+oHvBb7TlnZC40TzZxPmk5Q5gmhEqdUO22MtKtJYnCnvT9AyyKk12xRIz2TKM/4nVb4MvKHd77eelM/YS0L1a0PsDlt34R0YU/hPU3wvyxUq2r+jpvYDwkH/igtQVSO6cb2W6Vo/jr5Byc7/D9EbQ3heMUAGAAA=\",\n            \"secureState\": \"H4sIAAAAAAAEAD3MQQrCMBAAwK9I7mZTeysqeFbpoSJel5C0C01Ssisxvl6s4ANm9qecsfb+7Ood56frPUumOGKst7q4zSvMkQ9qElk6ALaTC8g6kM2JkxdtU4CdMS00BgaXCWd6o1CKsMasfkNH/6OUokurUx6/sIHH9TKs7ZYiC0brFBw/juQnSpcAAAA=\",\n            \"extendedProperties\": [],\n            \"entityState\": 3\n        \n    }\n}"
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Academics/CourseType/delete",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Academics",
+								"CourseType",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SecurityContext.GetAll",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Common/SecurityContext/GetAll",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Common",
+								"SecurityContext",
+								"GetAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentPreviousEducation.Get",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"payload\":{\"Id\":13}}"
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Admissions/StudentPreviousEducation/Get",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Admissions",
+								"StudentPreviousEducation",
+								"Get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cache.Remove",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"payload\":\"AuthStorage\"}"
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Common/Cache/Remove",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Common",
+								"Cache",
+								"Remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cache.Clear",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{rootUrl}}/api/commands/Common/Cache/Clear",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"api",
+								"commands",
+								"Common",
+								"Cache",
+								"Clear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Queries",
+			"description": "",
+			"item": [
+				{
+					"name": "Read the service root",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								""
+							]
+						},
+						"description": "All REST APIs should have a single entry point from which a generic hypermedia client can navigate to the resources in the service. In the response we see links to three things: 1. The $metadata document that describes the schema of ther service 2. Links to various collections of objects like People and Airports 3. Links to other top-level items like Me (a singleton) and operations."
+					},
+					"response": []
+				},
+				{
+					"name": "Read the service metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/$metadata",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"$metadata"
+							]
+						},
+						"description": "$metadata is an endpoint in OData services that contains a machine-readable description of the service model including type schemas, available operations, etc."
+					},
+					"response": []
+				},
+				{
+					"name": "Read an entity set",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses"
+							]
+						},
+						"description": "One of the most common responses from a REST API is a collection of resources. In this case we asked for the People collection. For each response, the OData service writes a self-described response (another REST principle) by annotating the response with a context URL. This context URL tells the service that the contents of the response are a collection of things in the People entity set. The @odata.nextLink annotation is present because the server opted to split the result set across multiple pages. The client can also drive paging using $top and $skip, but server-side paging is a mitigation against DoS attacks. The value property contains the bulk of the response. Note that @odata.id and @odata.editLink should generally not be present in the payload unless they deviate from convention. In this case it appears that there is a bug in our sample service. Pretend those properties aren't there."
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single entity from an entity set",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses(1)",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses(1)"
+							]
+						},
+						"description": "To get a particular entity from a collection, append a key segment. By default, key segments in OData services are bounded by parens because they may be composite keys, e.g., OrderLine(OrderId=1,LineNumber=1) or alternate keys, e.g., Person(SSN='000-00-0000') and Person(2115) both address the same resource. Some OData services use normal URL segments for key segments, e.g., Orders/1. This is not recommended because of the scenarios mentioned above."
+					},
+					"response": []
+				},
+				{
+					"name": "Get a primitive property",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses(1)?$select=Name",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses(1)"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "Name"
+								}
+							]
+						},
+						"description": "Even when fetching a primitive property, an object wrapper is returned rather than returning the raw primitive. This is to protect against a JSON vulnerability."
+					},
+					"response": []
+				},
+				{
+					"name": "Navigate to related entities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								"{\n  \"Emails\": [\"miathompson@contoso.com\", \"miathompson@example.com\"]\n}"
+							]
+						},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses(1)/CourseType",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses(1)",
+								"CourseType"
+							]
+						},
+						"description": "To navigate the resource graph, keep appending segments representing valid property names as defined in $metadata or in a full metadata response (see query x). In this case we have started from the service root, navigated to the entity set People, navigated to the resource keyed 'russellwhyte', navigated to the Friends property, navigated to the resource keyed 'scottketchum', and finally navigated to the AddressInfo property. Note that the @odata.context URL self-describes the payload."
+					},
+					"response": []
+				},
+				{
+					"name": "Filter a collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses?$filter=CreditHours eq 3",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "CreditHours eq 3"
+								}
+							]
+						},
+						"description": "The $filter system query option can be used to filter any collection of resources. Note that the response to a filtered collection is a collection of the same type, regardless of the number of matched resources."
+					},
+					"response": []
+				},
+				{
+					"name": "Filter on nested structures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses?$filter=CourseType/Name eq 'Competency Based'",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "CourseType/Name eq 'Competency Based'"
+								}
+							]
+						},
+						"description": "You can use any related properties in a filter clause by using the same segments used in the path to traverse properties."
+					},
+					"response": []
+				},
+				{
+					"name": "Filter using logic operators",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses?$filter=not(contains(Name,'a'))",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "not(contains(Name,'a'))"
+								}
+							]
+						},
+						"description": "You can use and, or and not to create more complex filter clauses."
+					},
+					"response": []
+				},
+				{
+					"name": "Filter using any/all operators",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://services.odata.org/V4/TripPinService/People?$filter=Emails/any(e: endswith(e, 'contoso.com'))",
+							"protocol": "http",
+							"host": [
+								"services",
+								"odata",
+								"org"
+							],
+							"path": [
+								"V4",
+								"TripPinService",
+								"People"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Emails/any(e: endswith(e, 'contoso.com'))"
+								}
+							]
+						},
+						"description": "You can use any/all lambda-style filters for collection properties."
+					},
+					"response": []
+				},
+				{
+					"name": "Sort a collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses?$orderby=Name desc",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses"
+							],
+							"query": [
+								{
+									"key": "$orderby",
+									"value": "Name desc"
+								}
+							]
+						},
+						"description": "You can use the $orderby system query option to specify ordering criteria. You can use many of the functions usable in $filter in $orderby as well."
+					},
+					"response": []
+				},
+				{
+					"name": "Client-side paging",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses?$top=2&$skip=2",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "2"
+								},
+								{
+									"key": "$skip",
+									"value": "2"
+								}
+							]
+						},
+						"description": "There are two types of paging in OData services. Servers can enable server-side paging, returning nextLinks that clients can follow to subsequent pages. Clients can drive paging using $top and $skip."
+					},
+					"response": []
+				},
+				{
+					"name": "Counting the elements in a collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses/$count",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses",
+								"$count"
+							]
+						},
+						"description": "If you want to know how many items meet a condition, you can use the $count path segment. Note that the Content-Type header indicates that the content is text/plain. Although it doesn't work with system query options in the reference service, $count can typically be combined with $filter."
+					},
+					"response": []
+				},
+				{
+					"name": "Expand related entities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses(1)?$expand=CourseType,CourseLevel",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses(1)"
+							],
+							"query": [
+								{
+									"key": "$expand",
+									"value": "CourseType,CourseLevel"
+								}
+							]
+						},
+						"description": "You can use the $expand system query option to include related resources. The expand clause can include many of the other system query options, enabling left-join type semantics. Also, you can expand <property>/$ref in order to get just the links to the related resources."
+					},
+					"response": []
+				},
+				{
+					"name": "Select the properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses(1)?$select=Code,Name",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses(1)"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "Code,Name"
+								}
+							]
+						},
+						"description": "You can use the $select system query option to only return specified properties."
+					},
+					"response": []
+				},
+				{
+					"name": "Request full metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								"{\n  \"Emails\": [\"miathompson@contoso.com\", \"miathompson@example.com\"]\n}"
+							]
+						},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses?$top=1&$format=application/json;odata.metadata=full",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "1"
+								},
+								{
+									"key": "$format",
+									"value": "application/json;odata.metadata=full"
+								}
+							]
+						},
+						"description": "By default OData services return an extremely compact JSON format. This happens by stripping out all of the metadata that should be calculable by \"smart\" OData clients. For generic hypermedia clients, you can request additional metadata by using the Accept header or $format system query option to request application/json;odata.metadata=full. In this case, we get a bunch of additional annotations in the payload indicating type information and relationships to related resources."
+					},
+					"response": []
+				},
+				{
+					"name": "Invoke a bound function",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								"{\n\"userName\": \"scottketchum\",\n\"tripId\": 0\n}"
+							]
+						},
+						"url": {
+							"raw": "{{rootUrl}}/ds/odata/Courses/CampusNexus.GetStudentEnrolledCourseList(studentId=30151)",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"ds",
+								"odata",
+								"Courses",
+								"CampusNexus.GetStudentEnrolledCourseList(studentId=30151)"
+							]
+						},
+						"description": "OData support bound custom functions. The bound functions are bounded to a resource. Note: OData functions CANNOT have side effect, so only GET verb is allowed."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "username",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3700da24-a1ef-41dc-9144-d0a0d0d8b39b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e6e0eccd-ea87-4d3d-af9c-6724e211d50f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
