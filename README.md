@@ -16,7 +16,7 @@ To get started:
 3. Run the Project
 
 ## PostmanCollections
-A set of [Postman] (https://www.getpostman.com/) collections that assist in disocering how to invoke CampusNexus Query Model and Command Model APIs.
+A set of [Postman](https://www.getpostman.com/) collections that assist in disocering how to invoke CampusNexus Query Model and Command Model APIs.
 
 ### Queries
 1. **Read the service root**
