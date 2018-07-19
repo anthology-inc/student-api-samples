@@ -55,10 +55,18 @@ By default OData services return an extremely compact JSON format. This happens 
   OData support bound custom functions. The bound functions are bounded to a resource. Note: OData functions CANNOT have side effect, so only GET verb is allowed.
 ### Commands
 1. **Get Commands**
+  Gets a list of all Commands broken down by domain: Academics, Admissions, Career Services, Common, CRM, Financial Aid, Student Accounts and Student Services
 2. **Create Course Type**
+  An example of how to create a new entity, in this case a Course Type.  It is important to note that this operation will initialize the entity and set any defaults applied by event handlers; however, it will not persist any data to the database.  To save an entity you must use the SaveNew or Save commands.
 3. **Save New Course Type**
+  An example of how to save a newly created entity.
 4. **Get Course Type**
+  An example of how to retrieve an existing entity.  Due to the way optomistic concurrency is implemented, this operation is required prior to calling the Save operation.
 5. **Delete Course Type**
+  Deletes an existing entity.  
 6. **StudentPreviousEducation.Get**
+  Represents how to invoke a non-CRUD related operation.  This operation will retieve the specified Student's previous education.
 7. **Cache.Remove**
+  Represents how to invoke a non-CRUD related operation.  This operation will evict the cache associated with the specified cache key.
 8. **Cache.Clear**
+  Represents how to invoke a non-CRUD related operation.  This operation will clear the server-side cache.
