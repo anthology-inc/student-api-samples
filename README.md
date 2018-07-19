@@ -15,8 +15,8 @@ To get started:
 2. Open Program.cs and set the **rootUri**, **userName** and **password** variables associated with your envrionment
 3. Run the Project
 
-## PostManCollections
-A set of PostMan collections that assist in disocering how to invoke CampusNexus Query Model and Command Model APIs.
+## PostmanCollections
+A set of [Postman] (https://www.getpostman.com/) collections that assist in disocering how to invoke CampusNexus Query Model and Command Model APIs.
 
 ### Queries
 1. **Read the service root**
