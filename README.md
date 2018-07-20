@@ -19,6 +19,7 @@ To get started:
 A set of [Postman](https://www.getpostman.com/) collections that assist in discovering how to invoke CampusNexus Query Model and Command Model APIs.
 
 ### Queries
+Below is a list of the Postman requests found in the Queries folder of the Collection.
 1. **Read the service root**
 All REST APIs should have a single entry point from which a generic hypermedia client can navigate to the resources in the service. In the response we see links to three things: 1. The $metadata document that describes the schema of ther service 2. Links to various collections of objects like People and Airports 3. Links to other top-level items like Me (a singleton) and operations.
 2. **Read the service metadata**
@@ -54,6 +55,7 @@ By default OData services return an extremely compact JSON format. This happens 
 17. **Invoke a bound function**
   OData support bound custom functions. The bound functions are bounded to a resource. Note: OData functions CANNOT have side effect, so only GET verb is allowed.
 ### Commands
+Below is a list of the Postman requests found in the Commands folder of the Collection.
 1. **Get Commands**
   Gets a list of all Commands broken down by domain: Academics, Admissions, Career Services, Common, CRM, Financial Aid, Student Accounts and Student Services
 2. **Create Course Type**
