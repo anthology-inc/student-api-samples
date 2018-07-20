@@ -23,7 +23,7 @@ namespace DotNetODataClient
                     Convert.ToBase64String(Encoding.ASCII.GetBytes($"{userName}:{password}")));
 
                 //invoke HTTP Get
-                var response = httpClient.GetAsync($"{rootUri}ds/odata/Courses").Result;
+                var response = httpClient.GetAsync($"{rootUri}ds/odata/Courses?$select=Code,Name").Result;
                 response.EnsureSuccessStatusCode();
 
                 //deserialize response into a JObject
