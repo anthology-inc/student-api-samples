@@ -28,6 +28,22 @@ To get started:
 ## PostmanCollections
 A set of [Postman](https://www.getpostman.com/) collections that assist in discovering how to invoke CampusNexus Query Model and Command Model APIs.
 
+## PythonODataClient
+PythonODataClient demonstrates usage of the CampusNexus OData Query API using Python.
+To get started:
+1. Clone the repository
+2. Install the python requests module `pip install requests`
+3. Open pythonodataclient.py and set the **root_uri**, **username** and **password** variables to match your environment.
+4. Run the program: python pythonodataclient.py
+
+## PythonWebApiClient
+PythonWebApiClient demonstrates usage of the CampusNexus Command Web API using Python.
+To get started:
+1. Clone the repository
+2. Install the python requests module `pip install requests`
+3. Open pythonwebapiclient.py and set the **root_uri**, **username** and **password** variables to match your environment.
+4. Run the program: python pythonwebapiclient.py
+
 ### Queries
 Below is a list of the Postman requests found in the Queries folder of the Collection.
 1. **Read the service root**
