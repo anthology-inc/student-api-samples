@@ -11,7 +11,7 @@ namespace DotNetODataClient
     {
         private static void Main(string[] args)
         {
-            //set the folliwng variables to match your environment.  It is recommended you use KeyStore to store credentials.
+            //set the following variables to match your environment.  It is recommended you use KeyStore to store credentials.
             string rootUri = "http://university-a.campusnexus.cloud/";
             string userName = "user@university-a.campusnexus.cloud";
             string password = "password";
