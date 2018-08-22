@@ -4,7 +4,7 @@ A set of [Postman](https://www.getpostman.com/) collections that assist in disco
 ### Queries
 Below is a list of the Postman requests found in the Queries folder of the Collection.
 1. **Read the service root**
-All REST APIs should have a single entry point from which a generic hypermedia client can navigate to the resources in the service. In the response we see links to three things: 1. The $metadata document that describes the schema of ther service 2. Links to various collections of objects like People and Airports 3. Links to other top-level items like Me (a singleton) and operations.
+All REST APIs should have a single entry point from which a generic hypermedia client can navigate to the resources in the service. In the response we see links to three things: 1. The $metadata document that describes the schema of ther service 2. Links to various collections of objects like Students and Courses 3. Links to other top-level items like Me (a singleton) and operations.
 2. **Read the service metadata**
 $metadata is an endpoint in OData services that contains a machine-readable description of the service model including type schemas, available operations, etc.
 3. **Read an entity set**
