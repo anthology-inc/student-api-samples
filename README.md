@@ -1,5 +1,5 @@
 # Introduction
-This repository includes a set of CampusNexus integration samples to help get started integration with CampusNexus APIs.
+This repository includes a set of CampusNexus integration samples to help you start working with the CampusNexus APIs.
 
 ## DotNetEventHandlers
 For those who prefer semicolons and curly brackets over the drag & drop visual experience provided by CampusNexus Workflow, DotNetEventHandlers is a sample .NET class library that introduces how to create event handlers in C#.  For this example, we create two event handlers against the Task entity:
@@ -11,24 +11,17 @@ To get started:
 2. Build the solution
 3. Copy DontNetEventHandlers.dll to the \bin folder of your web application
 
-## DotNetODataClient
+## OData Query Examples
+These samples will get you started consuming the CampusNexus Query API using various programming languages.
+
+### DotNetODataClient
 DotNetODataClient is a sample solution to get you stated on consuming the CampusNexus Query API using .NET.
 To get started:
 1. Clone the repository and open **DotNetODataClient.sln** in Visual Studio
 2. Open Program.cs and set the **rootUri**, **userName** and **password** variables associated with your envrionment
 3. Run the Project
 
-## DotNetWebApiClient
-DotNetODataClient is a sample solution to get you stated on consuming the CampusNexus Command API using .NET.
-To get started:
-1. Clone the repository and open **DotNetWebApiClient.sln** in Visual Studio
-2. Open Program.cs and set the **rootUri**, **userName** and **password** variables associated with your envrionment
-3. Run the Project
-
-## PostmanCollections
-A set of [Postman](https://www.getpostman.com/) collections that assist in discovering how to invoke CampusNexus Query Model and Command Model APIs.
-
-## PythonODataClient
+### PythonODataClient
 PythonODataClient demonstrates usage of the CampusNexus OData Query API using Python.
 To get started:
 1. Clone the repository
@@ -36,13 +29,56 @@ To get started:
 3. Open pythonodataclient.py and set the **root_uri**, **username** and **password** variables to match your environment.
 4. Run the program: python pythonodataclient.py
 
-## PythonWebApiClient
+### RubyODataClient
+RubyODataClient demonstrates usage of the CampusNexus OData Query API using Ruby.
+To get started:
+1. Clone the repository
+2. Install Dependencies (faraday, faraday_middleware)
+
+This project uses bundler to manage dependencies. You can easily install them:
+
+`bundle install --path=vendor/bundle`
+
+(Alternatively, use gem install)
+
+3. Open odataclient.rb and set the **root_uri**, **username** and **password** variables to match your environment.
+4. Run: `bundle exec ruby odataclient.rb`
+
+## Web Command API Examples
+These samples will get you started consuming the CampusNexus Command API using various programming languages.
+
+### DotNetWebApiClient
+DotNetWebApiClient is a sample solution to get you stated on consuming the CampusNexus Command API using .NET.
+To get started:
+1. Clone the repository and open **DotNetWebApiClient.sln** in Visual Studio
+2. Open Program.cs and set the **rootUri**, **userName** and **password** variables associated with your envrionment
+3. Run the Project
+
+### PythonWebApiClient
 PythonWebApiClient demonstrates usage of the CampusNexus Command Web API using Python.
 To get started:
 1. Clone the repository
 2. Install the python requests module `pip install requests`
 3. Open pythonwebapiclient.py and set the **root_uri**, **username** and **password** variables to match your environment.
 4. Run the program: python pythonwebapiclient.py
+
+### RubyWebApiClient
+RubyWebApiClient demonstrates usage of the CampusNexus Command API using Ruby.
+To get started:
+1. Clone the repository
+2. Install Dependencies (faraday, faraday_middleware, ruby_dig)
+
+This project uses bundler to manage dependencies. You can easily install them:
+
+`bundle install --path=vendor/bundle`
+
+(Alternatively, use gem install)
+
+3. Open webapiclient.rb and set the **root_uri**, **username** and **password** variables to match your environment.
+4. Run: `bundle exec ruby webapiclient.rb`
+
+## PostmanCollections
+A set of [Postman](https://www.getpostman.com/) collections that assist in discovering how to invoke CampusNexus Query Model and Command Model APIs.
 
 ### Queries
 Below is a list of the Postman requests found in the Queries folder of the Collection.
