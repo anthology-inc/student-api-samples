@@ -14,14 +14,14 @@ namespace DotNetWebApiClient
             string rootUri = "http://university-a.campusnexus.cloud/";
             string userName = "user@university-a.campusnexus.cloud";
             string password = "password";
+            string authHeader = Convert.ToBase64String(Encoding.ASCII.GetBytes($"{userName}:{password}"));
 
             using (var httpClient = new HttpClient())
             {
                 rootUri = $"{rootUri}/api/commands/Academics/CourseType";
 
                 //set authentication header
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
-                    Convert.ToBase64String(Encoding.ASCII.GetBytes($"{userName}:{password}")));
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeader);
                 var commandModelClient = new CommandModelClient(httpClient, rootUri);
 
                 //create
