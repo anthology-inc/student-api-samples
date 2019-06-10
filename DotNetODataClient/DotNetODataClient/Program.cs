@@ -15,12 +15,12 @@ namespace DotNetODataClient
             string rootUri = "http://university-a.campusnexus.cloud/";
             string userName = "user@university-a.campusnexus.cloud";
             string password = "password";
+            string authHeader = Convert.ToBase64String(Encoding.ASCII.GetBytes($"{userName}:{password}"));
 
             using (var httpClient = new HttpClient())
             {
                 //set authentication header
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
-                    Convert.ToBase64String(Encoding.ASCII.GetBytes($"{userName}:{password}")));
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeader);
 
                 //invoke HTTP Get
                 var response = httpClient.GetAsync($"{rootUri}ds/odata/Courses?$select=Code,Name").Result;
