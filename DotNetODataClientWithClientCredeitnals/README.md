@@ -30,10 +30,9 @@ The console application:
 - and then calls `CampusNexusStudent-WebApi` to get the a list of Courses, displaying the result
 
 ![Topology](./ReadmeFiles/console-with-secret.svg)
-
 For more information on the concepts used in this sample, be sure to read the [Daemon/console application that calls web APIs documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-daemon-overview).
 
-> ### Daemon applications can use two forms of secrets to authenticate themselves with Azure AD:
+> ### Console/Daemon applications can use two forms of secrets to authenticate themselves with Azure AD:
 >
 > - **application secrets** (also called application password).
 > - **certificates**.
@@ -57,7 +56,7 @@ To run this sample, you'll need:
 From your shell or command line:
 
 ```Shell
-git clone https://github.com/Azure-Samples/active-directory-dotnetcore-daemon-v2.git
+git clone https://github.com/campusmanagement/integration-samples.git
 ```
 
 or download and exact the repository .zip file.
