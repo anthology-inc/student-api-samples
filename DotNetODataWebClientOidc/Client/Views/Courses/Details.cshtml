@@ -1,0 +1,34 @@
+﻿@model DotNetODataWebClientOidc.Models.Course
+
+@{ ViewData["Title"] = "Details"; }
+
+<h2>Course Details</h2>
+CourseId:  @Html.DisplayFor(model => model.Id)
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Code
+            </th>
+            <th>
+                Credit Hours
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreditHours)
+            </td>
+        </tr>
+    </tbody>
+</table>
