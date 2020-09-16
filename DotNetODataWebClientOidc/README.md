@@ -1,8 +1,6 @@
 ---
 services: active-directory
 platforms: dotnet
-author: Tushar shah
-level: 200
 client: ASP.NET Core Web App
 service: CampusNexus API
 endpoint: Microsoft identity platform
