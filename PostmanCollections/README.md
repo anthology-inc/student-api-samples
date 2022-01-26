@@ -1,5 +1,5 @@
 ## PostmanCollections
-A set of [Postman](https://www.getpostman.com/) collections that assist in discovering how to invoke CampusNexus Query Model and Command Model APIs.
+A set of [Postman](https://www.getpostman.com/) collections that assist in discovering how to invoke Anthology Student Query Model and Command Model APIs.
 
 ### Queries
 Below is a list of the Postman requests found in the Queries folder of the Collection.
